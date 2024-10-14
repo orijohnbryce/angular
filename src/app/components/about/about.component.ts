@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
-
+export class AboutComponent implements OnInit, OnDestroy {
+    ngOnInit(): void {
+        console.log("onInit from AboutComponent");        
+    }
+    ngOnDestroy(): void {
+        console.log("onDestroy About");        
+    }
 }

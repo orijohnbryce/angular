@@ -1,4 +1,9 @@
 <p>home works!</p>
-<p> myNumber is:  {{myNumber * 100}}</p>
+<!-- <p> myNumber is:  {{myNumber * 100}}</p> -->
 
-<p *ngIf="myNumber === 0"> This is conditional presented!</p>
+<!-- <p *ngIf="myNumber === 0"> This is conditional presented!</p> -->
+
+<p *ngIf="today===5 || today===6"> מבצע סוף שבוע, הנחה של 50% על כל המוצרים</p>
+<p *ngIf="!(today===5 || today===6)"> התעדכנו בהקדם על מבצעי סוף השבוע שלנו</p>
+
+<div *ngIf="isTuesday()"> מבצע ליום שלישי, קינוח מתנה</div>
