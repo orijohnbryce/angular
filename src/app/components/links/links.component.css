@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display list items in a row */
+    justify-content: center; /* Center the list */
+    background-color: #333; /* Dark background for sub-header */
+}
+
+li {
+    margin: 0 15px; /* Space between the list items */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
+    font-weight: bold; /* Make text bold */
+    padding: 10px 15px; /* Add some padding */
+    display: inline-block; /* Ensure clickable area includes padding */
+}
+
+a:hover {
+    background-color: #575757; /* Darken the background on hover */
+    border-radius: 5px; /* Add rounded corners on hover */
+}
