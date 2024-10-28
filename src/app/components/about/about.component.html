@@ -1,1 +1,9 @@
 <p>about works!</p>
+
+<input [(ngModel)]="name" (change)="handleChange()">
+
+<br/>
+<br/>
+<button (click)="run()"> run </button>
+
+<div *ngFor="let n of arr"> {{n}} </div>

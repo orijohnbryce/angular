@@ -1,1 +1,16 @@
-<p>product-details works!</p>
+<div *ngIf="product">
+    <button [title]="tooltip" routerLink="/products"> Back </button>
+    <br/>
+    <img src="{{product.imageUrl}}"/>
+    <p> {{product.name}}</p>
+    <p> {{product.price}}</p>
+    <p>In Stock: {{product.stock}}</p>
+
+    <br/>
+    <button (click)="addToCart()"> הוסף לעגלה </button>
+</div>
+
+<!-- empty tag -->
+<ng-container *ngIf="!product">
+    <p> mashu </p>
+</ng-container>

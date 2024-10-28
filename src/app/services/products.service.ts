@@ -26,6 +26,20 @@ export class ProductsService {
     
     const observer = this.http.get<ProductModel>(environment.productsUrl + id);
     const product = await firstValueFrom(observer);
+    
     return product;
+  }
+
+  async addProduct(product: ProductModel): Promise<void>{
+
+    const formData = new FormData();
+
+    formData.append("name", product.name);
+    formData.append("price", product.price.toString());
+    formData.append("stock", product.stock.toString());
+    formData.append("image", product.image);
+
+    const observer = this.http.post<ProductModel>(environment.productsUrl, formData);
+    await firstValueFrom(observer);    
   }
 }
