@@ -1,0 +1,19 @@
+<div class="product-page">
+  <br />
+    <button routerLink="/products">Back</button>
+  <br />
+  
+  <div class="product-card">
+    <ng-container *ngIf="product">
+      <img
+        [src]="product.imageUrl"
+        alt="{{ product.name }}"
+        class="product-image"
+      />
+      <h2 class="product-name">{{ product.name }}</h2>
+      <p class="product-price">{{ product.price | currency : "ILS" }}</p>
+      <p class="product-stock">In Stock: {{ product.stock }}</p>
+      <button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
+    </ng-container>
+  </div>
+</div>

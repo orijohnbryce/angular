@@ -1,0 +1,39 @@
+<div>
+  <form (submit)="send()" ngNativeValidate  #myForm="ngForm">
+    <label> Name</label>
+    <span *ngIf="!product.name"> : Missing Name </span>
+    <input type="text" name="name" [(ngModel)]="product.name" required />
+
+    <label> Price</label>
+    <span *ngIf="price.invalid && price.touched" class="error">
+      : Price is required/invalid.
+    </span>
+    <input
+      type="number"
+      name="price"
+      step="0.01"
+      [(ngModel)]="product.price"
+      #price="ngModel"
+      required
+    />
+
+    <label> Stock</label>
+    <span *ngIf="stock.errors?.['min']"> minimum value required 2</span>
+    <span *ngIf="stock.errors?.['required']"> Stock required!</span>
+    <input
+      type="number"
+      name="stock"
+      [(ngModel)]="product.stock"
+      min="3"
+      #stock="ngModel"
+      required
+    />
+
+    <label> Image</label>
+    <!-- <input type="file" name="image" accept="image/*" [(ngModel)]="product.image"/> -->
+    <input type="file" (change)="onFileSelected($event)" />
+
+    <button [disabled]="myForm.invalid">ADD</button>
+    <!-- <button disabled={{myForm.invalid}}>ADD</button> // No Good -->   
+  </form>
+</div>

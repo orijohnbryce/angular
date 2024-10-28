@@ -3,14 +3,15 @@ import { Title } from '@angular/platform-browser';
 import { ProductsService } from '../../services/products.service';
 import { CommonModule } from '@angular/common';
 import { ProductModel } from '../../models/product.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
-//   providers: [ProductsService]
+//   providers: [ProductsService]  
 })
 export class ProductsComponent implements OnDestroy, OnInit {    
 

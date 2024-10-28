@@ -1,4 +1,5 @@
+<p>total products: {{ products?.length }}</p>
 
-<p> total products: {{products?.length}}</p>
-
-<p *ngFor="let p of products"> {{p.name}} </p>
+<div *ngFor="let p of products">  
+  <a routerLink="/product-details/{{p.id}}"> {{ p.name }} </a>
+</div>

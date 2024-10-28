@@ -1,0 +1,20 @@
+form {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    margin: 20px auto;
+    padding: 20px;
+    border:  1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+}
+
+input, button {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: larger;    
+}
+
+input.ng-invalid {
+    border: red solid 3px;
+}
